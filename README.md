@@ -3,7 +3,7 @@ Some resources you can use to test your k8s cluster
 
 ## Hello world node image with hostname
 
-You can use it to test a K8s service (i.e. ClusetIP) and check how load is balance between different pods.
+You can use it to test a K8s service (i.e. ClusetIP) and check how load is balance between different pods through an Ingress.
 It will give you and output like this:
 
 ```
