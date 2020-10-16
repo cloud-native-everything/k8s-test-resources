@@ -2,7 +2,7 @@
 Some resources you can use to test your k8s cluster
 
 ## Hello world node image with hostname
-
+### Create your own image
 You can use it to test a K8s service (i.e. ClusetIP) and check how load is balance between different pods through an Ingress.
 It will give you and output like this:
 
@@ -23,9 +23,11 @@ Hello World version ONE! Host/Podhello-node-3439300230-bg6ew
 Hello World version ONE! Host/Podhello-node-3439300230-or7r0
 ```
 Just get the Dockerfile and build it.
+
+### Test your image
 I've created an image at pinrojas/hello-node:v1 y you want it to use it now and save the time for building your own one.
 
-In fact, you can use also heelo-node-deploy.yaml to create a deployment of 4 replicas to test you Kubernetes
+In fact, you can use also hello-node-deploy.yaml to create a deployment of 4 replicas to test you Kubernetes
 
 ```
 # Create deployment 4 replicas
