@@ -30,14 +30,21 @@ In fact, you can use also heelo-node-deploy.yaml to create a deployment of 4 rep
 ```
 # Create deployment 4 replicas
 kubectl create -f hello-node-deploy.yaml
+```
 
-# Create NodepOrt service with this deployment
+Create NodepOrt service with this deployment
+```
 kubectl expose deployment hello-node-deploy --type=NodePort
+```
 
-# Check service
+Check service
+
+```
 kubectl describe services hellp-node-nport
+```
 
-# You should get an output ike this
+You should get an output ike this
+```
 Name:                     hellp-node-nport
 Namespace:                default
 Labels:                   <none>
@@ -52,11 +59,16 @@ Endpoints:                10.140.135.129:8080,10.140.135.130:8080,10.140.58.192:
 Session Affinity:         None
 External Traffic Policy:  Cluster
 Events:                   <none>
+```
 
-# test your exposed deployment
+Test your exposed deployment
+```
+# 10.10.10.102 is the k8s worker node IP
 curl http://10.10.10.102:30083
+```
 
-#You should get an output like this
+You should get an output like this
+```
 Hello World version ONE! Host/Pod: hello-node-deploy-8568b8dfb6-njvgc
 [root@k8s-node01 ~]# curl http://10.10.10.102:30083
 Hello World version ONE! Host/Pod: hello-node-deploy-8568b8dfb6-kltsv
