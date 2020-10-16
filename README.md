@@ -43,7 +43,7 @@ Check service
 kubectl describe services hellp-node-nport
 ```
 
-You should get an output ike this
+You should get an output like this
 ```
 Name:                     hellp-node-nport
 Namespace:                default
